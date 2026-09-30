@@ -1,0 +1,110 @@
+[
+  {
+    "id": "u1",
+    "name": "Saad Pervaiz",
+    "username": "saad",
+    "avatar": "S",
+    "role": "Web Developer",
+    "headline": "Software Engineering Student",
+    "bio": "Building Socially as part of my Web Development internship at Arch Technologies.",
+    "location": "Lahore, Pakistan",
+    "joined": "2026",
+    "cover": "gradient-1",
+    "stats": {
+      "friends": 128,
+      "posts": 24,
+      "likes": 512
+    },
+    "friends": ["u2", "u3"]
+  },
+  {
+    "id": "u2",
+    "name": "Alex Johnson",
+    "username": "alex",
+    "avatar": "A",
+    "role": "Web Developer",
+    "headline": "Full-Stack Developer",
+    "bio": "Building things for the web. Coffee-fueled.",
+    "location": "London, UK",
+    "joined": "2026",
+    "cover": "gradient-2",
+    "stats": {
+      "friends": 342,
+      "posts": 87,
+      "likes": 1240
+    },
+    "friends": ["u1"]
+  },
+  {
+    "id": "u3",
+    "name": "Maria Khan",
+    "username": "maria",
+    "avatar": "M",
+    "role": "UI/UX Designer",
+    "headline": "Designing digital experiences",
+    "bio": "Design is not just what it looks like. It's how it works.",
+    "location": "Karachi, Pakistan",
+    "joined": "2026",
+    "cover": "gradient-3",
+    "stats": {
+      "friends": 215,
+      "posts": 56,
+      "likes": 890
+    },
+    "friends": ["u1"]
+  },
+  {
+    "id": "u4",
+    "name": "Ahmed Ali",
+    "username": "ahmed",
+    "avatar": "A",
+    "role": "Web Developer",
+    "headline": "Frontend Developer",
+    "bio": "Turning ideas into pixels.",
+    "location": "Islamabad, Pakistan",
+    "joined": "2026",
+    "cover": "gradient-4",
+    "stats": {
+      "friends": 98,
+      "posts": 31,
+      "likes": 420
+    },
+    "friends": []
+  },
+  {
+    "id": "u5",
+    "name": "Zara Khan",
+    "username": "zara",
+    "avatar": "Z",
+    "role": "UI Designer",
+    "headline": "Product Designer",
+    "bio": "Designing clean, honest interfaces.",
+    "location": "Dubai, UAE",
+    "joined": "2026",
+    "cover": "gradient-5",
+    "stats": {
+      "friends": 176,
+      "posts": 44,
+      "likes": 730
+    },
+    "friends": []
+  },
+  {
+    "id": "u6",
+    "name": "Hamza Ahmed",
+    "username": "hamza",
+    "avatar": "H",
+    "role": "Software Engineer",
+    "headline": "Backend Developer",
+    "bio": "APIs, databases, and everything in between.",
+    "location": "Lahore, Pakistan",
+    "joined": "2026",
+    "cover": "gradient-6",
+    "stats": {
+      "friends": 267,
+      "posts": 61,
+      "likes": 980
+    },
+    "friends": []
+  }
+]

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Socially — Connect. Share. Grow.</title>
+
+    <link rel="icon" type="image/png" href="assets/images/Socially_Logo.png">
+
+    <meta
+        name="description"
+        content="Socially — A modern social networking platform. Connect. Share. Grow."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         NAVBAR
+    ============================================================ -->
+
+    <header class="navbar">
+
+        <a class="brand" href="index.html">
+            <div class="brand-icon">S</div>
+            <span>Socially</span>
+        </a>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Socially..."
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="themeToggle" title="Toggle theme">
+                🌙
+            </button>
+           
+            <a class="icon-btn" href="notifications.html" id="notificationBtn" title="Notifications">
+                🔔
+                <span class="notification-count" id="navNotifCount" hidden>0</span>
+            </a>
+
+            <a class="profile-btn" href="profile.html?id=u1" id="profileBtn">
+                <div class="avatar small-avatar">S</div>
+                <span>Saad</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================================================
+         MAIN LAYOUT
+    ============================================================ -->
+
+    <main class="main-layout">
+
+
+        <!-- ============================================================
+             LEFT SIDEBAR
+        ============================================================ -->
+
+        <aside class="sidebar">
+
+            <nav class="sidebar-nav">
+
+                <a class="nav-item active" href="index.html" data-view="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Home</span>
+                </a>
+
+                <a class="nav-item" href="profile.html?id=u1" data-view="profile">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-label">My Profile</span>
+                </a>
+
+                <a class="nav-item" href="friends.html" data-view="friends">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-label">Friends</span>
+                </a>
+                
+                <a class="nav-item" href="notifications.html" data-view="notifications">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-label">Notifications</span>
+                </a>
+                
+                <a class="nav-item" href="settings.html" data-view="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Settings</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-divider"></div>
+
+
+            <div class="sidebar-section">
+
+                <h3>Shortcuts</h3>
+
+                <button class="nav-item" data-shortcut="professional">
+                    <span class="nav-icon">💼</span>
+                    <span class="nav-label">Professional</span>
+                </button>
+
+                <button class="nav-item" data-shortcut="technology">
+                    <span class="nav-icon">💻</span>
+                    <span class="nav-label">Technology</span>
+                </button>
+
+                <button class="nav-item" data-shortcut="education">
+                    <span class="nav-icon">🎓</span>
+                    <span class="nav-label">Education</span>
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-footer">
+                <p>© 2026 Socially</p>
+                <p>Connect. Share. Grow.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- ============================================================
+             FEED
+        ============================================================ -->
+
+        <section class="feed">
+
+            <!-- CREATE POST -->
+
+            <div class="card create-post">
+
+                <div class="post-top">
+
+                    <div class="avatar">S</div>
+
+                    <input
+                        type="text"
+                        class="post-input-field"
+                        id="postInput"
+                        placeholder="What's on your mind, Saad?"
+                        autocomplete="off"
+                        maxlength="500"
+                    >
+
+                </div>
+
+
+                <div class="post-actions">
+
+                    <button class="post-action-btn" data-type="photo">
+                        <span>🖼️</span>
+                        Photo
+                    </button>
+
+                    <button class="post-action-btn" data-type="video">
+                        <span>🎥</span>
+                        Video
+                    </button>
+
+                    <button class="post-action-btn" data-type="feeling">
+                        <span>😊</span>
+                        Feeling
+                    </button>
+
+                    <button class="post-button" id="createPostBtn">
+                        Post
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEED CONTAINER — posts rendered dynamically by posts.js -->
+
+            <div id="feedContainer">
+
+                <div class="feed-loading">
+                    <div class="spinner"></div>
+                    <p>Loading posts…</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================================
+             RIGHT SIDEBAR
+        ============================================================ -->
+
+        <aside class="right-sidebar">
+
+
+            <!-- PROFILE CARD — links to own profile -->
+
+            <a class="card profile-card" href="profile.html?id=u1">
+
+                <div class="cover"></div>
+
+                <div class="profile-content">
+
+                    <div class="avatar profile-avatar">S</div>
+
+                    <h2>Saad Pervaiz</h2>
+
+                    <p>Software Engineering Student</p>
+
+                    <p class="profile-role">Web Developer</p>
+
+
+                    <div class="profile-stats">
+
+                        <div>
+                            <strong>128</strong>
+                            <span>Friends</span>
+                        </div>
+
+                        <div>
+                            <strong>24</strong>
+                            <span>Posts</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- SUGGESTIONS -->
+
+            <div class="card suggestions">
+
+                <div class="card-title">
+
+                    <h2>People You May Know</h2>
+
+                    <button class="see-all-btn">See All</button>
+
+                </div>
+
+
+                <!-- Ahmed Ali (u4) -->
+
+                <div class="suggestion">
+
+                    <a href="profile.html?id=u4" class="avatar-link">
+                        <div class="avatar">A</div>
+                    </a>
+
+                    <div class="suggestion-info">
+                        <a href="profile.html?id=u4" class="name-link">
+                            <strong>Ahmed Ali</strong>
+                        </a>
+                        <span>Web Developer</span>
+                    </div>
+
+                    <button class="add-friend" aria-label="Add friend">+</button>
+
+                </div>
+
+
+                <!-- Zara Khan (u5) -->
+
+                <div class="suggestion">
+
+                    <a href="profile.html?id=u5" class="avatar-link">
+                        <div class="avatar">Z</div>
+                    </a>
+
+                    <div class="suggestion-info">
+                        <a href="profile.html?id=u5" class="name-link">
+                            <strong>Zara Khan</strong>
+                        </a>
+                        <span>UI Designer</span>
+                    </div>
+
+                    <button class="add-friend" aria-label="Add friend">+</button>
+
+                </div>
+
+
+                <!-- Hamza Ahmed (u6) -->
+
+                <div class="suggestion">
+
+                    <a href="profile.html?id=u6" class="avatar-link">
+                        <div class="avatar">H</div>
+                    </a>
+
+                    <div class="suggestion-info">
+                        <a href="profile.html?id=u6" class="name-link">
+                            <strong>Hamza Ahmed</strong>
+                        </a>
+                        <span>Software Engineer</span>
+                    </div>
+
+                    <button class="add-friend" aria-label="Add friend">+</button>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+    </main>
+
+
+    <!-- ============================================================
+         SCRIPTS
+    ============================================================ -->
+
+    <script>
+      /* Load the notification count on page load */
+      (function () {
+        fetch("/api/notifications/u1")
+          .then(r => r.json())
+          .then(list => {
+            const unread = list.filter(n => !n.read).length;
+            const el = document.getElementById("navNotifCount");
+            if (el && unread > 0) {
+              el.textContent = unread > 9 ? "9+" : unread;
+              el.hidden = false;
+            }
+          })
+          .catch(() => {});
+      })();
+    </script>
+    
+    <!-- Socket.IO client (served by the server) -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/websocket.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "p1",
+    "authorId": "u2",
+    "content": "Just finished working on a new web development project. Building something exciting! 🚀",
+    "image": null,
+    "createdAt": 1735689600000,
+    "likes": ["u1", "u3"],
+    "comments": [
+      {
+        "id": "c1",
+        "authorId": "u1",
+        "text": "Awesome work Alex! Can't wait to see it.",
+        "createdAt": 1735693200000
+      },
+      {
+        "id": "c2",
+        "authorId": "u3",
+        "text": "Love the energy 🔥",
+        "createdAt": 1735696800000
+      }
+    ]
+  },
+  {
+    "id": "p2",
+    "authorId": "u3",
+    "content": "Design is not just what something looks like. It's also about how it works. 🎨",
+    "image": null,
+    "createdAt": 1735682400000,
+    "likes": ["u1", "u2", "u4"],
+    "comments": [
+      {
+        "id": "c3",
+        "authorId": "u2",
+        "text": "So true. Design is functional.",
+        "createdAt": 1735686000000
+      }
+    ]
+  },
+  {
+    "id": "p3",
+    "authorId": "u4",
+    "content": "Frontend tip of the day: always test your layouts at 320px width. Mobile-first saves hours later. 📱",
+    "image": null,
+    "createdAt": 1735675200000,
+    "likes": ["u1"],
+    "comments": []
+  }
+]

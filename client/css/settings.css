@@ -1,0 +1,269 @@
+/* =========================================================
+   SOCIALLY — Settings Page
+   Version 1.0 — Phase 7
+========================================================= */
+
+.settings-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 26px 26px 80px;
+}
+
+.settings-header {
+    margin-bottom: 22px;
+}
+
+.settings-header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.settings-header p {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.settings-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    padding: 22px 24px;
+    margin-bottom: 18px;
+}
+
+.settings-card h2 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 16px;
+
+    letter-spacing: -0.2px;
+}
+
+
+/* =========================================================
+   ROWS
+========================================================= */
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.setting-row strong {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.setting-row span {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.setting-row select {
+    padding: 8px 12px;
+
+    background: var(--bg-input);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-size: 12.5px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: var(--transition);
+}
+
+.setting-row select:hover,
+.setting-row select:focus {
+    border-color: var(--accent);
+}
+
+
+/* =========================================================
+   TOGGLE SWITCH
+========================================================= */
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+
+    background: var(--border);
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.toggle-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+    border-radius: 50%;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+    transition: 0.25s;
+}
+
+.toggle input:checked + .toggle-slider {
+    background: var(--accent);
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(20px);
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+.secondary-button {
+    padding: 10px 20px;
+
+    background: var(--bg-input);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.secondary-button:hover {
+    background: var(--bg-hover);
+}
+
+.primary-button {
+    padding: 10px 22px;
+
+    background: var(--accent);
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    box-shadow: 0 6px 16px rgba(91, 75, 255, 0.28);
+}
+
+.primary-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 620px) {
+    .settings-page {
+        padding: 20px 14px 60px;
+    }
+
+    .settings-header h1 {
+        font-size: 22px;
+    }
+
+    .settings-card {
+        padding: 18px;
+    }
+
+    .setting-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .setting-row select,
+    .toggle {
+        align-self: flex-start;
+    }
+
+    .settings-actions {
+        flex-direction: column-reverse;
+    }
+
+    .settings-actions button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "socially",
+  "version": "1.0.0",
+  "description": "Socially - A social networking platform",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": [
+    "social-network",
+    "socially",
+    "web-development"
+  ],
+  "author": "Saad Pervaiz",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

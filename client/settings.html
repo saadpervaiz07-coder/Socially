@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings — Socially</title>
+
+    <link rel="icon" type="image/png" href="assets/images/Socially_Logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a class="brand" href="index.html">
+            <div class="brand-icon">S</div>
+            <span>Socially</span>
+        </a>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Socially..."
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="themeToggle" title="Toggle theme">
+                🌙
+            </button>
+
+            <a class="icon-btn" href="notifications.html" title="Notifications">
+                🔔
+                <span class="notification-count" id="navNotifCount" hidden>0</span>
+            </a>
+
+            <a class="profile-btn" href="profile.html?id=u1" id="profileBtn">
+                <div class="avatar small-avatar">S</div>
+                <span>Saad</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="settings-page">
+
+        <div class="settings-header">
+            <h1>Settings</h1>
+            <p>Manage your Socially experience</p>
+        </div>
+
+
+        <!-- PRIVACY -->
+        <section class="settings-card">
+            <h2>🔒 Privacy</h2>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Profile visibility</strong>
+                    <span>Who can see your full profile details</span>
+                </div>
+                <select id="profileVisibility">
+                    <option value="public">Public</option>
+                    <option value="friends">Friends only</option>
+                    <option value="private">Only me</option>
+                </select>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Show activity status</strong>
+                    <span>Let others see when you're online</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="showActivity" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Allow friend requests</strong>
+                    <span>Anyone can send you a friend request</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="allowRequests" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Show email on profile</strong>
+                    <span>Display your email to others</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="showEmail">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </section>
+
+
+        <!-- NOTIFICATIONS -->
+        <section class="settings-card">
+            <h2>🔔 Notifications</h2>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Likes</strong>
+                    <span>Notify when someone likes your post</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="notifLikes" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Comments</strong>
+                    <span>Notify when someone comments on your post</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="notifComments" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Friend requests</strong>
+                    <span>Notify on new friend requests</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="notifRequests" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </section>
+
+
+        <!-- APPEARANCE -->
+        <section class="settings-card">
+            <h2>🎨 Appearance</h2>
+
+            <div class="setting-row">
+                <div>
+                    <strong>Theme</strong>
+                    <span>Choose light or dark mode</span>
+                </div>
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </section>
+
+
+        <!-- ACTIONS -->
+        <div class="settings-actions">
+            <button class="secondary-button" id="resetSettingsBtn">
+                Reset to defaults
+            </button>
+            <button class="primary-button" id="saveSettingsBtn">
+                Save changes
+            </button>
+        </div>
+
+    </main>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/websocket.js"></script>
+
+</body>
+</html>

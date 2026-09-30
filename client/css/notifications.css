@@ -1,0 +1,450 @@
+/* =========================================================
+   SOCIALLY — Notifications Page
+   Version 1.0 — Phase 6
+========================================================= */
+
+
+/* =========================================================
+   1. PAGE LAYOUT
+========================================================= */
+
+.notifications-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 26px 26px 80px;
+}
+
+
+.notifications-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+
+    flex-wrap: wrap;
+}
+
+
+.notifications-header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+
+.notifications-header p {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+.notifications-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 9px 16px;
+
+    background: var(--bg-card);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    font-size: 12.5px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.secondary-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+
+.danger-outline-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 9px 16px;
+
+    background: transparent;
+    color: var(--like-color);
+
+    border: 1px solid var(--like-color);
+    border-radius: 10px;
+
+    font-size: 12.5px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.danger-outline-btn:hover {
+    background: var(--like-color);
+    color: #fff;
+}
+
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    background: var(--accent);
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+    box-shadow: 0 6px 16px rgba(91, 75, 255, 0.28);
+}
+
+
+.primary-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   2. LOADING + EMPTY
+========================================================= */
+
+.notif-loading,
+.notif-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    color: var(--text-muted);
+}
+
+
+.notif-loading[hidden],
+.notif-empty[hidden],
+.notif-list[hidden] {
+    display: none !important;
+}
+
+
+.spinner {
+    width: 34px;
+    height: 34px;
+
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+.notif-empty .empty-icon {
+    font-size: 42px;
+    margin-bottom: 4px;
+    opacity: 0.7;
+}
+
+
+.notif-empty h3 {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+.notif-empty p {
+    font-size: 13px;
+    max-width: 320px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   3. NOTIFICATION LIST
+========================================================= */
+
+.notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.notif-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 14px 16px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: inherit;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    position: relative;
+}
+
+
+.notif-item:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+
+/* Unread state — subtle left accent */
+.notif-item.unread {
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent-light) 0%,
+            var(--bg-card) 40%
+        );
+
+    border-color:
+        color-mix(in srgb, var(--accent) 25%, var(--border));
+}
+
+
+.notif-item.unread::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+
+    width: 3px;
+
+    background: var(--accent);
+    border-radius: 0 3px 3px 0;
+}
+
+
+/* Avatar */
+
+.notif-avatar {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: linear-gradient(135deg, #7c6cff, #4433ee);
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    border-radius: 50%;
+
+    position: relative;
+}
+
+
+.notif-type-icon {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+
+    background: var(--bg-card);
+    border: 2px solid var(--bg-card);
+    border-radius: 50%;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.notif-type-icon.like    { background: #fff0f3; }
+.notif-type-icon.comment { background: #eef4ff; }
+
+
+/* Body */
+
+.notif-body {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.notif-body p {
+    font-size: 13.5px;
+    line-height: 1.5;
+
+    color: var(--text-primary);
+
+    word-wrap: break-word;
+}
+
+
+.notif-body p strong {
+    font-weight: 800;
+}
+
+
+.notif-preview {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+    font-size: 12.5px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.notif-time {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--text-muted);
+    font-size: 11.5px;
+}
+
+
+/* Delete button */
+
+.notif-delete {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: transparent;
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition: var(--transition);
+}
+
+
+.notif-item:hover .notif-delete {
+    opacity: 1;
+}
+
+
+.notif-delete:hover {
+    background: var(--like-color-soft, rgba(237, 82, 114, 0.1));
+    color: var(--like-color);
+}
+
+
+/* =========================================================
+   4. RESPONSIVE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .notifications-page {
+        padding: 20px 14px 60px;
+    }
+
+    .notifications-header h1 {
+        font-size: 22px;
+    }
+
+    .notifications-actions {
+        width: 100%;
+    }
+
+    .secondary-button,
+    .danger-outline-btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .notif-item {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .notif-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .notif-body p {
+        font-size: 12.5px;
+    }
+
+    .notif-delete {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Friends — Socially</title>
+
+    <link rel="icon" type="image/png" href="assets/images/Socially_Logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/friends.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a class="brand" href="index.html">
+            <div class="brand-icon">S</div>
+            <span>Socially</span>
+        </a>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search people..."
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="themeToggle" title="Toggle theme">
+                🌙
+            </button>
+
+            <a class="icon-btn" href="notifications.html" title="Notifications">
+                🔔
+                <span class="notification-count" id="navNotifCount" hidden>0</span>
+            </a>
+
+            <a class="profile-btn" href="profile.html?id=u1" id="profileBtn">
+                <div class="avatar small-avatar">S</div>
+                <span>Saad</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="friends-page">
+
+        <div class="friends-header">
+            <div>
+                <h1>Friends</h1>
+                <p>Discover and connect with people on Socially</p>
+            </div>
+        </div>
+
+
+        <!-- SEARCH FILTER -->
+        <div class="friends-search">
+            <input
+                type="text"
+                id="friendsSearchInput"
+                placeholder="Search friends by name or role..."
+                autocomplete="off"
+            >
+            <button class="search-clear-btn" id="friendsSearchClear" hidden>✕</button>
+        </div>
+
+
+        <!-- TABS -->
+        <div class="friends-tabs">
+            <button class="friends-tab active" data-tab="all">All People</button>
+            <button class="friends-tab" data-tab="myfriends">My Friends</button>
+        </div>
+
+
+        <!-- LOADING -->
+        <div class="friends-loading" id="friendsLoading">
+            <div class="spinner"></div>
+            <p>Loading people…</p>
+        </div>
+
+
+        <!-- EMPTY -->
+        <div class="friends-empty" id="friendsEmpty" hidden>
+            <div class="empty-icon">👥</div>
+            <h3>No people found</h3>
+            <p>Try a different search.</p>
+        </div>
+
+
+        <!-- GRID -->
+        <div class="friends-page-grid" id="friendsGrid" hidden></div>
+
+    </main>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/friends.js"></script>
+    <script src="js/websocket.js"></script>
+
+</body>
+</html>

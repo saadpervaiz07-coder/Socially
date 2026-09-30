@@ -1,0 +1,107 @@
+
+[]
+
+
+// [
+//   {
+//     "id": "n1790719471864_pmen",
+//     "recipientId": "u2",
+//     "actorId": "u1",
+//     "type": "comment",
+//     "postId": "p1",
+//     "preview": "me too 💖",
+//     "read": false,
+//     "createdAt": 1790719471864
+//   },
+//   {
+//     "id": "n1790719500243_i9ea",
+//     "recipientId": "u2",
+//     "actorId": "u1",
+//     "type": "like",
+//     "postId": "p1",
+//     "preview": "Just finished working on a new web development project. Buil",
+//     "read": false,
+//     "createdAt": 1790719500243
+//   },
+//   {
+//     "id": "n1790719518004_ylh0",
+//     "recipientId": "u4",
+//     "actorId": "u1",
+//     "type": "comment",
+//     "postId": "p3",
+//     "preview": "what u doin son",
+//     "read": false,
+//     "createdAt": 1790719518004
+//   },
+//   {
+//     "id": "n1790721366883_os4l",
+//     "recipientId": "u2",
+//     "actorId": "u1",
+//     "type": "comment",
+//     "postId": "p1",
+//     "preview": "what are u doin",
+//     "read": false,
+//     "createdAt": 1790721366883
+//   },
+//   {
+//     "id": "n1790721378696_qbnw",
+//     "recipientId": "u2",
+//     "actorId": "u1",
+//     "type": "like",
+//     "postId": "p1",
+//     "preview": "Just finished working on a new web development project. Buil",
+//     "read": false,
+//     "createdAt": 1790721378696
+//   },
+//   {
+//     "id": "n1790721402546_86j4",
+//     "recipientId": "u3",
+//     "actorId": "u1",
+//     "type": "comment",
+//     "postId": "p2",
+//     "preview": "so whats the plan Alex",
+//     "read": false,
+//     "createdAt": 1790721402546
+//   },
+//   {
+//     "id": "n1790721409728_wgw4",
+//     "recipientId": "u4",
+//     "actorId": "u1",
+//     "type": "like",
+//     "postId": "p3",
+//     "preview": "Frontend tip of the day: always test your layouts at 320px w",
+//     "read": false,
+//     "createdAt": 1790721409728
+//   },
+//   {
+//     "id": "n1790721415211_alx8",
+//     "recipientId": "u3",
+//     "actorId": "u1",
+//     "type": "like",
+//     "postId": "p2",
+//     "preview": "Design is not just what something looks like. It's also abou",
+//     "read": false,
+//     "createdAt": 1790721415211
+//   },
+//   {
+//     "id": "n1790721417919_aa2k",
+//     "recipientId": "u4",
+//     "actorId": "u1",
+//     "type": "like",
+//     "postId": "p3",
+//     "preview": "Frontend tip of the day: always test your layouts at 320px w",
+//     "read": false,
+//     "createdAt": 1790721417919
+//   },
+//   {
+//     "id": "n1790721431751_svrh",
+//     "recipientId": "u4",
+//     "actorId": "u1",
+//     "type": "comment",
+//     "postId": "p3",
+//     "preview": "introduce yourself",
+//     "read": false,
+//     "createdAt": 1790721431751
+//   }
+// ]
+
